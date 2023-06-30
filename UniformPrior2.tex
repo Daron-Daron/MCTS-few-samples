@@ -1,0 +1,403 @@
+
+
+\documentclass[12pt]{article}
+
+%\include{Chapter2}
+
+\usepackage[margin = 1in, bmargin = 0.5in]{geometry}
+
+\usepackage{pgfplots}
+
+\usepackage{enumitem}
+
+\usepackage{subfig}
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\normalfont\LARGE\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\Large}
+\titlespacing*{\chapter}
+  {0pt}{-25pt}{25pt}
+  
+  
+\usepackage{fancyhdr}
+
+\pagestyle{fancyplain}
+\lhead{}
+\rhead{}
+\chead{}
+\lfoot{Daron Anderson}
+\rfoot{Notes}
+\renewcommand{\headrulewidth}{0pt}
+
+  
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{cancel}
+
+\usepackage{amsthm}
+
+\usepackage{accents}
+
+\usepackage{wrapfig}
+
+\usepackage{mathrsfs}
+
+\usepackage{eufrak}
+
+\usepackage{tikz-cd}
+
+\usepackage{xcolor}
+
+\usepackage{chapterbib}
+
+\usepackage{fancyhdr}
+ 
+\pagenumbering{arabic}
+
+%\usepackage[none]{hyphenat}
+
+\definecolor{ggreen}{rgb}{0,0.75,0.08}
+
+  
+
+\theoremstyle{definition}
+
+ \newcounter{sharedcounter}  
+\newtheorem{theorem}[sharedcounter]{Theorem}
+\newtheorem{definition}[sharedcounter]{Definition} 
+\newtheorem{lemma}[sharedcounter]{Lemma} 
+\newtheorem{corollary}[sharedcounter]{Corollary} 
+\newtheorem*{qn}{Question} 
+\newtheorem*{note}{Note} 
+\newtheorem{example}{Example} 
+
+
+
+ 
+
+
+
+
+
+
+\newcommand{\rungs}{\ensuremath{\overline{ \underline \cH}}}
+\newcommand{\A}{\ensuremath{\alpha}}
+\newcommand{\vi}{\ensuremath{\varphi}}
+\newcommand{\Z}{\ensuremath{\zeta}}
+\newcommand{\K}{\ensuremath{\kappa}}
+\newcommand{\B}{\ensuremath{\beta}}
+\newcommand{\si}{\ensuremath{\sigma}}
+\newcommand{\E}{\ensuremath{\varepsilon}}
+\newcommand{\Ep}{\ensuremath{\varepsilon}}
+\newcommand{\W}{\ensuremath{\omega}}
+\newcommand{\WW}{\ensuremath{\Omega}}
+\newcommand{\La}{\ensuremath{\lambda}}
+\newcommand{\LA}{\ensuremath{\Lambda}}
+\newcommand{\G}{\ensuremath{\gamma}}
+\newcommand{\D}{\ensuremath{\delta}}
+\newcommand{\GG}{\ensuremath{\Gamma}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\JJ}{\ensuremath{\mathbb J}}
+\newcommand{\KK}{\ensuremath{\mathbb K}}
+\newcommand{\LL}{\ensuremath{\mathbb L}}
+\newcommand{\BB}{\ensuremath{\mathbb B}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\HH}{\ensuremath{\mathbb H}}
+\newcommand{\0}{\ensuremath{\varnothing}}
+\newcommand{\cT}{\ensuremath{\mathcal T}}
+\newcommand{\cG}{\ensuremath{\mathcal G}}
+\newcommand{\cL}{\ensuremath{\mathcal L}}
+\newcommand{\sL}{\ensuremath{\mathscr L}}
+\newcommand{\cD}{\ensuremath{\mathcal D}}
+\newcommand{\cR}{\ensuremath{\mathcal R}}
+\newcommand{\cA}{\ensuremath{\mathcal A}}
+\newcommand{\cH}{\ensuremath{\mathcal H}}
+\newcommand{\cS}{\ensuremath{\mathcal S}}
+\newcommand{\cQ}{\ensuremath{\mathcal Q}}
+\newcommand{\cK}{\ensuremath{\mathcal K}}
+\newcommand{\cB}{\ensuremath{\mathcal B}}
+\newcommand{\cF}{\ensuremath{\mathcal F}}
+\newcommand{\cP}{\ensuremath{\mathcal P}}
+\newcommand{\sA}{\ensuremath{\mathscr A}}
+\newcommand{\sV}{\ensuremath{\mathscr V}}
+\newcommand{\sB}{\ensuremath{\mathscr B}}
+\newcommand{\cC}{\ensuremath{\mathcal C}}
+\newcommand{\sI}{\ensuremath{\mathscr I}}
+\newcommand{\sC}{\ensuremath{\mathscr C}}
+\newcommand{\sD}{\ensuremath{\mathscr D}}
+\newcommand{\sS}{\ensuremath{\mathscr S}}
+\newcommand{\sP}{\ensuremath{\mathscr P}}
+\newcommand{\sE}{\ensuremath{\mathscr E}}
+\newcommand{\cE}{\ensuremath{\mathcal E}}
+\newcommand{\cI}{\ensuremath{\mathcal I}}
+\newcommand{\cJ}{\ensuremath{\mathcal J}}
+\newcommand{\sU}{\ensuremath{\mathscr U}}
+\newcommand{\cU}{\ensuremath{\mathcal U}}
+\newcommand{\cW}{\ensuremath{\mathcal W}}
+\newcommand{\cV}{\ensuremath{\mathcal V}}
+\newcommand{\cN}{\ensuremath{\mathcal N}}
+\newcommand{\cM}{\ensuremath{\mathcal M}}
+\newcommand{\DD}{\ensuremath{\partial}}
+\newcommand{\All}{\ensuremath{\forall}}
+\newcommand{\Ex}{\ensuremath{\exists}}
+\newcommand{\cl}{\ensuremath{\colon}}
+\newcommand{\ra}{\ensuremath{\rangle}}
+\newcommand{\la}{\ensuremath{\langle}}
+\newcommand{\xx}{\ensuremath{\tilde{x}}}
+\newcommand{\yy}{\ensuremath{\tilde{y}}}
+\newcommand{\nd}{\ensuremath{\wedge}}
+\newcommand{\dd}{\ensuremath{\partial}}
+\newcommand{\cn}{\ensuremath{\frak c}}
+\newcommand{\down}{\ensuremath{\shortdownarrow}}
+\newcommand{\ol}{\ensuremath{\overline}}
+\newcommand{\wt}{\ensuremath{\widetilde}}
+\newcommand{\ds}{\ensuremath{\displaystyle}}
+\newcommand{\noy}{\ensuremath{\setminus}} 
+\newcommand{\MM}{{\bf M}} 
+\newcommand{\SSS}{{\bf \Sigma}} 
+
+\newcommand{\1}{{\bf 1}} 
+
+
+
+\usetikzlibrary{decorations.pathmorphing}
+
+\fancyhead[L,C]{} \fancyfoot[L]{Daron Anderson}\fancyfoot[C]{Bayesian Clusters Algorithm June 2023}\fancyfoot[R]{\thepage}
+
+\begin{document}
+
+\begin{center}
+ 
+\Large Dilina's Algorithm $-$ Unreliable Means and Variances 
+
+\end{center} 
+\openup 0.5em 
+  
+  
+  \noindent
+  Given a new user, we want to compute $P(G = g | D(t), x_i)$ where $D(t)$ is the history of the new user on turn $t$ and $x_i$ are some observations gathered before we start the algorithm. In particular $x_i$ are some draws from each group for each item, used to estimate group means and variances. 
+  
+  If we know the means and   variances a priori, we can compute $P(D(t)| G=g)$ exactly. However, if we have few observations $x_i$ then we cannot be confident the sample mean and variances are close to the true means and variances, and we should be more conservative updating the probabilities. 
+  
+  Write ${\bf \Sigma}   =  \si(g,v)_{gv} $ and $ {\bf M } =    \mu_{gv}$ for the matrices of   means and standard deviations. First decompose over all the possible $\si,\mu$ values on an evenly-spaced grid:
+  
+  \begin{align}
+   P(G=g| D, x) &= \sum_{\si, \mu}  P(G=g,    \MM =   \mu, \SSS =   \si| D, x)\\
+   &= \sum_{\si, \mu}  P(g,       \mu,    \si| D, x_i) \text{ for ease of notation}
+  \end{align}
+
+  where we sum over all possibilities for $\MM,\SSS$. Using Bayes' theorem we can flip the two arguments on the RHS to get
+  
+  \begin{align}
+   P(g,       \mu,    \si| D, x) =P(D, x|  g,       \mu,    \si  )\frac{P(g,        \mu,    \si ) }{P(  D, x) }
+  \end{align}
+  
+  Since $x$ are drawn before we start the algorithm, and we assume all the group-item draws are independent,   the first term factors as   $P(D|  g,     \mu,  \si  )P(x|  g,       \mu,    \si  )$. The first factor, we already know how to compute it under the normal assumption.
+  
+  $$ P(D| G=g,       \mu,    \si  ) = \prod_{i=1}^t \frac{ 1}{ \si(g,v_i)\sqrt{2 \pi}} \exp \left(- \frac{(r_i -   \mu(g,v_i))^2}{  \si^2(g,v_i)}\right) $$
+  
+  The above must be re-computed each turn when $D$ is updated. But the exponential form means we just need to multiply the old RHS by a new exponential factor
+  
+  
+  For the second factor, again use how $x$ are drawn before we start the algorithm, to eliminate the dependence on $g$ from the conditional expectation, to get $P(x|  g,       \mu,    \si  ) = P(x|       \mu,  \si  )$.
+  
+  Since all the draws are independent, this factorises as the product of drawing each $x$ individually. To write it in full, say we make $i(g,v)$ draws each from group $g$ and item $v$. So $x = \{x(g,v,i): i \le i(g,v)\}$. 
+  
+  
+  \begin{align*}
+   P(x|         \mu,  \si  ) &= \prod_{i,g,v}   \frac{ 1}{\si(g,v) \sqrt{2 \pi}} \exp \left( -\frac{(x(i,g,v) - \mu(g,v))^2}{\si^2(g,v)}\right)  \\ &= \prod_{g,v} \prod_{i=1}^{i(g,v)}   \frac{ 1}{\si(g,v) \sqrt{2 \pi}} \exp \left( -\frac{(x(i,g,v) - \mu(g,v))^2}{\si^2(g,v)}\right) \\ &= \prod_{g,v}  \left(  \frac{ 1 }{\si(g,v) \sqrt{2 \pi}} \right)^{i(g,v)}\exp \left( -\sum_{i=1}^{i(g,v)} \frac{(x(i,g,v) - \mu(g,v))^2}{\si^2(g,v)}\right) 
+  \end{align*}
+
+  Going back to (2) and (3) we get
+   
+  
+  
+  \begin{align}
+   P(G=g| D, x) &= \sum_{\mu,\si} P( x|        \mu,    \si  ) P(D |  g,       \mu,    \si  ) \frac{P(g,        \mu,    \si ) }{P(  D, x) }
+  \end{align}
+  
+  where the first two factors are known. For the third factor use independence to write the numerator as $P(g,        \mu,    \si ) =  P(g)       P (\mu,    \si )$. The denominator does not depend on $g$ and so we can neglect it to get the final form
+  
+  \begin{align}
+   P(G=g| D, x) \propto \sum_{\mu,\si} P( x|        \mu,    \si  ) P(D |  g,       \mu,    \si  )   P(\mu ,\sigma)  P(g)
+  \end{align}
+  
+   
+  
+  The first factor $P( x|        \mu,    \si  ) $ depends on the samples taken to estimate the clusters. It does not change each turn.  The second factor $P(D |  g,       \mu,    \si  ) $ must be updated with each new item presented. The $  P(\mu,\sigma), P(g)$ will depend on priors for $g$ and $\mu,\si$. The former can be taken as the proportion of users in each cluster. The latter will have to be a ``measure of uncertainty''. We cannot take it as the empirical distribution of all the arms, since the distinguisher arms are by definition non-representative of the other arms as a whole. I suggest a uniform prior on $\mu,\si$. Or perhaps uniform priors on $\mu,\si^2$ since both the variance and standard deviations occur in the formulae.
+  
+  Let's do a sanity check to recover the formula from earlier, where we assumed $ \mu, \si$ are known a priori. Notice we only used the identity of  $x$ when we (a) compute $P(x| \mu, \si)$ explicitly and (b) write $P(D,x|  g,       \mu,    \si  ) = P(D|  g,     \mu,  \si  )P(x|  g,       \mu,    \si  )$.  So the formula (5) holds for any random variable $x$ such that (b) holds. In particular let $x =x_0$ be constant  and $\SSS = \si_0, \MM = \mu_0$ also be constant.  Since constant random variables are independent of everything else we still have (b) and the formulas will simplify.
+  
+  The LHS of (5) becomes just $P(G=g|D)$. For the RHS the sum disappears since the term $P(\mu, \si) = P(\MM = \mu, \SSS = \si)$ is zero except when $\mu,\si = \mu_0,\si_0$ and it equals $1$. 
+  
+  
+  
+  \begin{align}
+   P(G=g| D ) &\propto   P( x_0|        \mu_0,    \si _0 ) P(D |  g,       \mu_0,    \si_0  )    P(g)   
+  \end{align}
+  The first term is constant and cancels when we normalise.   probability $1$ the above becomes
+  
+  \begin{align}
+    P(G=g| D ) &\propto  \frac{ P(D |  g,       \mu_0,    \si_0  )    P(g)   }{ \sum_h P(D |  h,       \mu_0,    \si_0  )    P(h) }
+  \end{align}
+  
+  which is the same as before.
+  
+  \subsection{But what does it all mean?}
+  
+  The meaning of a prior on $G$ is clear. It says what is the chance of a randomly drawn user coming from a given group. This can be estimated in practice by looking at past users. Then Dilina's algorithm gives a probability as we draw a large number of users. A uniform prior means the following: Fix a history $D$ and generate a large number of users with equal probability from each group. Look at all the users with history $D$.  The formula $\G^{t}(g)e^{-L^t(g)}$ gives   what proportion of those users are in each group. 
+  
+  Having a prior over the user-items is slipperier. If we had a large sample of ``useful items'' to form a prior, we would already be done, since ther eis no need for all this is we have reliable samples. I think we will end up taking a uniform prior on the mean in some range, and then a uniform prior on either the standard deviation or variance in some other range. These will give different updates.
+  
+  \subsection{Uniform Priors}
+   
+   If we use a uniform prior on $\mu, \si,g$ the $P(\mu, \si)$ and $P(g)$  terms cancel and we get 
+   
+  \begin{align}
+   P(G=g| D, x) \propto \sum_{\mu,\si} P( x|        \mu,    \si  ) P(D |  g,       \mu,    \si  )    
+  \end{align}
+  
+  \subsection{Computing the Parts}
+   
+   The first factor   we want to compute is
+   
+  \begin{align*}
+   P(x|         \mu,  \si  )  = \prod_v \prod_{h}  \left(  \frac{ 1 }{\si(h,v)  } \right)^{i(h,v)}\exp \left( -\sum_{i=1}^{i(h,v)} \frac{(x(i,h,v) - \mu(h,v))^2}{\si^2(h,v)}\right)  \\
+   =    \prod_v \prod_{h}  X_{hv} =  \prod_v \left( X_{g v}\prod_{h \ne g}  X_{hv} \right)
+  \end{align*}
+  
+  for any $g$. Note  since we only interested in the proportions   of (5) as $g$ varies we have neglected the factors of $\sqrt {2 \pi}$ above. We can  also factorise 
+  
+  
+  \begin{align*}P(D| G=g,       \mu,    \si  )  = \prod_{i=1}^t \frac{  1}{\si(g,v_i) } \exp \left(- \frac{(r_i -   \mu(g,v_i))^2}{  \si^2(g,v_i)}\right)
+  \end{align*}    
+  To make this amenable  to products with $P(x|\mu, \sigma)$ write, on turn $t$, for each $v$ that 
+  $\mu(g,\wt v) = \mu(g,v_i)$ if there is some turn $i=t,\ldots, t$ with $v_i = v$. Since we never present the same item twice all $v_i$ are distinct and so $\wt v$ is well-defined. Likewise define $r(\wt v) = r_i$ for the same turn $i$. i.e $r (\wt v)$ is the reward on the turn $v$ was presented to the user.  Define $\si(g,\wt v) = \si(g, v_i)$ for the same $i$. If no such $i$ exists define $r(\wt v) = \mu(g, \wt v) = 0$ and $\si(g,\wt v) = 1$. The above can be written
+  
+  \begin{align*}P(D| G=g,       \mu,    \si  )  = \prod_{v} \frac{  1}{\si(g,\wt v) } \exp \left(- \frac{(r(\wt v) -   \mu(g,\wt v))^2}{  \si^2(g,\wt v)}\right) = \prod_v Y_{gv}
+  \end{align*}    
+  
+  since each $v$-factor equals 1 unless $v$ has been played. Hence we can write
+  
+  
+  \begin{align}  P(G=g| D,x) \propto  \sum_{\mu,\sigma} \left( \prod_v Y_g \right)    \prod_v \left( X_{g v}\prod_{h \ne g}  X_{hv}  \right)  = \sum_{\mu,\sigma}    \prod_v \left( X_{g v} Y_{gv} \prod_{h \ne g}  X_{hv}  \right)
+  \end{align}
+  
+  Unfortunately, integration over $\si,\mu$ involves integrating simultaneously over each $\mu(g,v)$ and $\si(g,v)$ of which there are likely hundreds. i.e $\sum_{\mu ,\sigma}$ abbreviates 
+  
+  $$   \sum_{\substack{\mu(G,I)\\ \si(G,I)}} \sum_{\substack{\mu(G-1,I)\\ \si(G-1,I)}} \ldots \sum_{\substack{\mu(1,2)\\ \si(1,2)}}   \sum_{\substack{\mu(G,1)\\ \si(G,1)}} \sum_{\substack{\mu(G-1,1)\\ \si(G-1,1)}} \ldots \sum_{\substack{\mu(1,1)\\ \si(1,1)}}$$
+  
+  
+  Even assuming independence and separable priors, we still end up integrating over a box with dimension in the hundreds or thousands. Fortunately things decompose nicely to let us only integrate over relatively smaller boxes, one corresponding to each $g,v$ pair.
+  Observe that $\mu(f,v)$ and $\si(f,v)$ appear only in the terms $X_{f,v} $ and $ Y_{f,v}$ and not in the other $X_{f',v'} $ and $ Y_{f',v'}$  Hence we can bring the sums through the products to get
+  
+  \begin{align}    P(G=g| D,x) \propto  \prod_v \left(  \left( \sum_{\substack{\mu(g,v)\\ \si(g,v)}} X_{g v} Y_{gv} \right) \prod_{h \ne g} \left(  \sum_{\substack{\mu(h,v)\\ \si(h,v)}} X_{hv}  \right) \right)\\
+  = \left(  \prod_v   \sum_{\substack{\mu(g,v)\\ \si(g,v)}} X_{g v} Y_{gv} \right)\left( \prod_v \prod_{h \ne g} \sum_{\substack{\mu(h,v)\\ \si(h,v)}} X_{h v}   \right)
+  \end{align}
+  
+  The second term depends only on the data obtained before we run the algorithm. The first term changes as we present more items and as more $\wt v$ become active. We can simplify somewhat by rescaling by $ \prod_v \prod_{h} \sum_{\substack{\mu(h,v)\\ \si(h,v)}} X_{h v} $ to get
+   
+  
+  
+  \begin{align}    P(G=g| D,x) \propto  
+    \left(  \prod_v   \sum_{\substack{\mu(g,v)\\ \si(g,v)}} X_{g v} Y_{gv} \right) / \left( \prod_v   \sum_{\substack{\mu(g,v)\\ \si(g,v)}} X_{g v}   \right) 
+  \end{align}
+  
+  The denominator depends only on $g$ and does not change as the history changes. 
+  Now reintroduce the dependence on time through $D^{t}$ and $Y^{t}_{gv}$ . We can obtain the above on turn $t$ from the equivalent on turn $t-1$ as follows
+  
+  
+  
+  \begin{align}    P(G=g| D^t,x) \propto   P(G=g| D^{t-1},x) \times
+    \left(  \prod_v   \sum_{\substack{\mu(g,v)\\ \si(g,v)}} X_{g v} Y^t_{gv} \right) / \left(  \prod_v   \sum_{\substack{\mu(g,v)\\ \si(g,v)}} X_{g v} Y^{t-1}_{gv} \right) 
+  \end{align}
+  
+  
+  According to the definition the values of $Y^{t-1}_{gv}$ and $Y^{t}_{gv}$ change only for $v = v(t)$ the action on turn $t$. Also since $v(t)$ has not been played before turn $t$ we have $Y^{t}_{gv(t)} =1$ and  
+  \begin{align*} Y^{t}_{gv(t)} =  \frac{  1}{\si(g,v(t)) } \exp \left(- \frac{(r_t -   \mu(g, v(t)))^2}{  \si^2(g, v(t))}\right)  
+  \end{align*}    
+   Hence the other factors in the $v$-product cancel and we get
+  
+  
+  \begin{align}    P(G=g| D^t,x) \propto   P(G=g| D^{t-1},x) \times
+    \left(   \sum_{\substack{\mu(g,v(t))\\ \si(g,v(t))}} X_{g v(t)} Y^t_{gv(t)} \right) / \left(    \sum_{\substack{\mu(g,v(t))\\ \si(g,v(t))}} X_{g v(t)}  \right) 
+  \end{align}
+  
+  We can now recall the definitions of $X_{gv}$ and $Y_{gv}$ to expand the rightmost factor as  
+  
+  
+  \begin{align}  \displaystyle \frac{\sum \left(  \frac{ 1 }{\si(g,v(t))  } \right)^{i(g,v(t))+1}\exp \left( -\sum_{i=1}^{i(g,v(t))} \frac{(x(i,g,v) - \mu(g,v(t)))^2}{\si^2(g,v(t))} - \frac{(r_t -   \mu(g, v(t)))^2}{  \si^2(g, v(t))} \right)  }{\sum \left(  \frac{ 1 }{  \si(g,v(t))  } \right)^{i(g,v(t))}\exp \left( -\sum_{i=1}^{i(g,v(t))} \frac{(x(i,g,v) - \mu(g,v(t)))^2}{\si^2(g,v(t))}\right) }
+  \end{align}
+  
+  or supressing the indices on $\mu$ and $\si$ where possible 
+  
+  
+  
+  \begin{align}  \displaystyle \frac{\sum_{\mu,\si}    \si   ^{-i(g,v(t))-1}\exp \left( -\sum_{i=1}^{i(g,v(t))} \frac{(x(i,g,v) - \mu )^2}{\si^2 } - \frac{(r_t -   \mu )^2}{  \si^2  } \right)  }{\sum_{\mu,\si}    \si   ^{-i(g,v(t))}\exp \left( -\sum_{i=1}^{i(g,v(t))} \frac{(x(i,g,v) - \mu)^2}{\si^2}\right) }\label{finalupdate}
+  \end{align}
+  
+  This means each time we update the prior, we have to compute one summation per group. 
+  
+  
+  {\bf Note:} It feels like this can be derived in a  more straightforward manner once you know what you're looking for. 
+  
+  Each sum should be computed numerically by replacing it with an integral, since we are summing over a fine grid in the relevant range. For example $\mu$ on a grid over $[0,5]$ and $\si$ over $[0,2]$.  
+  
+  {\bf Note:} There must be a way to make this formal, and have an integral rather than a sum  from the very start. You would need a continuous version of the equality $P(A) = \sum_i P(A, Y=y_i)$ for $Y$ a discrete random variable. Though in practice all our random variables are discrete, since we only have finite precision. 
+   
+  Swapping between sums and integrals will introduce a constant factor depending on the grid. But it cancels in the numerator and denominator provided we replace the top and bottom sums with integrals. 
+  
+  This should also work for a nonuniform prior on $\mu,\si$ provided they are separable. i.e $P(\mu,\si)$ factors as the product of all the $P(\mu(g,v))P(\si(g,v))$ terms. You just have to carry around the $P(\mu, \si) $ in the derivation, rather than setting it equal to $1$, until you're ready to replace the sums with   integrals. Instead we get
+  
+  \begin{align}  \displaystyle \frac{\sum_{\mu,\si}    \si   ^{-i(g,v(t))-1}\exp \left( -\sum_{i=1}^{i(g,v(t))} \frac{(x(i,g,v) - \mu )^2}{\si^2 } - \frac{(r_t -   \mu )^2}{  \si^2  } \right)  P(\Sigma(g,v(t)) = \si) P(M(g,v(t)) = \mu))}{\sum_{\mu,\si}    \si   ^{-i(g,v(t))}\exp \left( -\sum_{i=1}^{i(g,v(t))} \frac{(x(i,g,v) - \mu)^2}{\si^2}\right) P(\Sigma(g,v(t)) = \si) P(M(g,v(t)) = \mu)} 
+  \end{align}
+  
+  For a fine grid the numerator becomes 
+   
+  
+  \begin{align}   \int_{\mu} \int_{\si}    \si   ^{-i(g,v_t)-1}\exp \left( -\sum_{i=1}^{i(g,v_t)} \frac{(x(i,g,v) - \mu )^2}{\si^2 } - \frac{(r_t -   \mu )^2}{  \si^2  } \right)  f_\Sigma (\si) f_M(\mu )  d \mu  d \sigma  
+  \end{align}
+  Where $f_\Sigma (\si), f_M(\mu ) $ are the pdf of the random variables   $\Sigma = \Sigma(g,v_t) $ and $M =  M(g,v_t)$. %Note since the pdf occur in the denominator and numerator it does not matter if we scale them both up by a constant 
+  
+  One   prior that might be of interest is when the mean is still uniform, meaning $f_M(\si) = 1$ but, rather than the standard deviations being uniform, the variances are uniform, i.e $f_{\Sigma^2}(\si)   = 1 $. Write $\Sigma^2 = u(\Sigma)$ for $u(x)=x^2$. The general rule for pdfs of functions of random variables is $$ f_{u(\Sigma)}(\sigma) = u'(\sigma) f_{\Sigma} (u (\sigma))$$
+  assuming $\Sigma^2$ is uniform we get $1= f_{\Sigma^2}(\si)  =f_{u(\Sigma)}(\sigma) = u'(\sigma) f_{\Sigma} (u (\sigma)) = 2 \si f_\Sigma ( \si^2)$. Replace $\si$ with $\si^2$ to get $f_\Sigma ( \si) = 1/2\sqrt \si $. ({\bf Note:} Double check this is the correct rule and usage, and the factor is not upside-down.)
+  
+  
+  
+  
+  There is a temptation to try and integrate symbolically. Integrating over $\si$ first gives and answer in terms of the incomplete gamma function, which we then have to integrate over $\mu$. Integrating over $\mu$ is an incomplete Gaussian integral, which we know has no closed form. However it certainly has lookup tables, so it might be faster to compute the integral in terms of the error function first, and then sum numerically over $\sigma$.
+  
+  Perhaps it would not effect performance much if we replace the improper Gaussian integrals with proper Gaussian integrals. We know how to compute those. 
+   
+  \subsection{UCB}
+  
+  The process for updating the test prior during the UCB step is the same as \eqref{finalupdate} with one difference $-$ we cannot draw a test value for $r_t$ since we do not know the mean and variance. The best we can do is select a test action $w$ and draw the test rating $r_{t}$ empirically from the samples $x(i,g,w)$ for group $g$ on item $w$. The test prior values $P(G=g | \wt D^t,x)$ are obtained by multiplying $P(G=g | D^{t-1},x)$ by 
+  
+  \begin{align}  \displaystyle \frac{\int_{\mu,\si}    \si   ^{-i(g,w)-1}\exp \left( -\sum_{i=1}^{i(g,w)} \frac{(x(i,g,v) - \mu )^2}{\si^2 } - \frac{(S_{g,v} -   \mu )^2}{  \si^2  } \right)  d\Sigma d M}{\int_{\mu,\si}    \si   ^{-i(g,w)}\exp \left( -\sum_{i=1}^{i(g,w)} \frac{(x(i,g,v) - \mu)^2}{\si^2}\right) d\Sigma d M}\label{artificialupdate}
+  \end{align}
+  where $S_{g,v} = x(i,g,v)$ with equal probability over $i$. 
+  
+  {\bf Question} How does the above reduce to the old update when there is a large number of samples? Looking at it, it looks like the new term will be swallowed up by all the existing samples. What we'd expect to happen is that for a large number of samples, a lot of weight is put on a very small range of $\mu,\sigma$, over that range there is very little variation, in the common factors of numerators and denominator, and they effectively cancel, leaving just the new sample factor, which matches Dilina's old algorithm
+  
+  I suspect the inability to draw test samples is a blessing in disguise, as it will lower the computational cost of pulling an arm each UCB round. And we want to avoid computing double integrals in each UCB step since we might need 50,000 rounds for eight cluster problems. That's eight double integrals times 50,000 times however many real items we present to the user. Sounds like a lot.
+  
+  
+  For example if we have only five samples per group-item, then for each $w,g$ there are only five values the factors \eqref{artificialupdate} can take. So at the very start of the algorithm we compute the    $G \times \mathcal V \times 5$ integrals offline once and for all, and then just look up the values for every UCB step. This works because the update factors do not change depending on the past history. The history for ever turn is incorporated into the prior on the following turn. From that point on we are free to forget the history.
+  
+  
+  
+\bibliography{bibtexreferences3}{}
+\bibliographystyle{plain}
+\end{document}
+
